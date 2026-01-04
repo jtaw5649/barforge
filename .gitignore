@@ -1,0 +1,8 @@
+target/
+node_modules/
+test-results/
+dist/
+*.env
+playwright-report/
+tmp/
+.artifacts/
