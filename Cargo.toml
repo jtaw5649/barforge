@@ -1,0 +1,30 @@
+[workspace]
+members = [
+    "crates/barforge-contracts",
+    "crates/barforge-types",
+    "crates/barforge-web-ui",
+    "apps/barforge-web",
+    "apps/barforge-desktop",
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+serde = { version = "1.0.228", features = ["derive"] }
+serde_yml = "0.0.12"
+serde_json = "1.0.148"
+time = "0.3.44"
+url = "2.5.7"
+dioxus = { version = "0.7.2", default-features = false }
+dioxus-fullstack = { version = "0.7.2", default-features = false }
+dioxus-server = "0.7.2"
+dioxus-router = "0.7.2"
+dioxus-ssr = "0.7.2"
+dioxus-history = "0.7.2"
+manganis = "0.7.2"
+base64 = "0.22.1"
+ring = "0.17.14"
+semver = "1.0.27"

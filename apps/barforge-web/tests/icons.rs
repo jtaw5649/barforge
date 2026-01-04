@@ -1,0 +1,76 @@
+#[test]
+fn icon_assets_do_not_use_currentcolor() {
+    let icons = [
+        (
+            "icon-arrow-left.svg",
+            include_str!("../assets/icons/icon-arrow-left.svg"),
+        ),
+        (
+            "icon-badge-check.svg",
+            include_str!("../assets/icons/icon-badge-check.svg"),
+        ),
+        (
+            "icon-bell.svg",
+            include_str!("../assets/icons/icon-bell.svg"),
+        ),
+        (
+            "icon-calendar.svg",
+            include_str!("../assets/icons/icon-calendar.svg"),
+        ),
+        (
+            "icon-cloud.svg",
+            include_str!("../assets/icons/icon-cloud.svg"),
+        ),
+        (
+            "icon-download.svg",
+            include_str!("../assets/icons/icon-download.svg"),
+        ),
+        (
+            "icon-github.svg",
+            include_str!("../assets/icons/icon-github.svg"),
+        ),
+        (
+            "icon-globe.svg",
+            include_str!("../assets/icons/icon-globe.svg"),
+        ),
+        (
+            "icon-heart.svg",
+            include_str!("../assets/icons/icon-heart.svg"),
+        ),
+        (
+            "icon-layout-grid.svg",
+            include_str!("../assets/icons/icon-layout-grid.svg"),
+        ),
+        (
+            "icon-mail.svg",
+            include_str!("../assets/icons/icon-mail.svg"),
+        ),
+        (
+            "icon-message-circle.svg",
+            include_str!("../assets/icons/icon-message-circle.svg"),
+        ),
+        (
+            "icon-package.svg",
+            include_str!("../assets/icons/icon-package.svg"),
+        ),
+        (
+            "icon-shield.svg",
+            include_str!("../assets/icons/icon-shield.svg"),
+        ),
+        (
+            "icon-user.svg",
+            include_str!("../assets/icons/icon-user.svg"),
+        ),
+        (
+            "icon-users.svg",
+            include_str!("../assets/icons/icon-users.svg"),
+        ),
+    ];
+
+    for (name, content) in icons {
+        assert!(
+            !content.contains("currentColor"),
+            "icon {name} should not rely on currentColor when loaded via <img>"
+        );
+    }
+}

@@ -1,0 +1,17 @@
+[package]
+name = "barforge-contracts"
+version = "0.0.1"
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+oas3 = { version = "0.20.1", features = ["yaml-spec"] }
+serde.workspace = true
+serde_yml.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+http = "1.4.0"
+jsonschema = "0.38.1"
+oasert = "0.1.4"
+ureq = { version = "3.1.4", features = ["json"] }
